@@ -15,7 +15,7 @@ class UrlGenerator
 
     /**
      * @param string $lockfileStr
-     * @return string URL
+     * @return string|null URL
      */
     public function generate(string $lockfileStr)
     {
@@ -28,6 +28,10 @@ class UrlGenerator
 
             return $package['source']['url'];
         }, $data['packages']));
+
+        if (!$urls) {
+            return null;
+        }
 
         // Assuming Github URLs, the "identifier" is the same as the path name
         $ids = array_filter(array_map(function($url) {

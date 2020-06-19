@@ -37,4 +37,11 @@ if (!$lockfileStr) {
 }
 
 $gen = new UrlGenerator();
-echo $gen->generate($lockfileStr);
+$url = $gen->generate($lockfileStr);
+
+if (!$url) {
+    echo sprintf('Could not find Silverstripe modules in %s', realpath($lockfilePath)) . PHP_EOL;
+    exit(2);
+}
+
+echo $url;
