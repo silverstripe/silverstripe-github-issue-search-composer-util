@@ -10,7 +10,7 @@ It shows only issues related to those Silverstripe modules.
 Install within a project (auto-discovers lock file)
 
 ```
-composer require silverstripe/github-issue-search-composer-util:^0.1
+composer require --dev silverstripe/github-issue-search-composer-util:^0.1
 ``` 
 
 Install globally (and pass through a lock file)
