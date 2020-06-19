@@ -1,6 +1,6 @@
 <?php
 
-namespace Silverstripe\GithubIssueSearch\Util;
+namespace Silverstripe\IssueSearch\Util;
 
 /**
  * Could've done this with composer/composer package,

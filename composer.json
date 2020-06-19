@@ -2,10 +2,10 @@
   "name": "silverstripe/github-issue-search-composer-util",
   "description": "Browse Silverstripe module issues based on dependencies in your composer.lock file",
   "license": "BSD-3-Clause",
-  "bin": ["bin/github-issue-search"],
+  "bin": ["bin/ss-issue-search"],
   "autoload": {
     "psr-4": {
-        "Silverstripe\\GithubIssueSearch\\Util\\": "src/"
+        "Silverstripe\\IssueSearch\\Util\\": "src/"
     }
   }
 }

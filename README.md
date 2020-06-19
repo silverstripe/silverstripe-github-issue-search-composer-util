@@ -24,13 +24,13 @@ composer global require silverstripe/github-issue-search-composer-util:^0.1
 In a Silverstripe project:
 
 ```
-vendor/bin/github-issue-search
+vendor/bin/ss-issue-search
 ```
 
 Globally with a custom lock file:
 
 ```
-cat /my/project/composer.lock | github-issue-search
+cat /my/project/composer.lock | ss-issue-search
 ```
 
 The command will output a URL that you can open in your favourite browser.
@@ -39,5 +39,5 @@ On MacOSX, you can do this automatically with the `open` command,
 on Windows with the `start` command.
 
 ```
-cat /my/project/composer.lock | github-issue-search | xargs open
+cat /my/project/composer.lock | ss-issue-search | xargs open
 ``` 

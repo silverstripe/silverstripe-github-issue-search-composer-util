@@ -8,7 +8,7 @@ foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php
     }
 }
 
-use Silverstripe\GithubIssueSearch\Util\UrlGenerator;
+use Silverstripe\IssueSearch\Util\UrlGenerator;
 
 // Try to read from stdin
 stream_set_blocking(STDIN, 0);
