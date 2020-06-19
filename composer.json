@@ -1,0 +1,11 @@
+{
+  "name": "silverstripe/github-issue-search-composer-util",
+  "description": "Reads a composer.lock and opens an issue browser with any modules contained there",
+  "license": "BSD-3-Clause",
+  "bin": ["bin/github-issue-search"],
+  "autoload": {
+    "psr-4": {
+        "Silverstripe\\GithubIssueSearch\\Util\\": "src/"
+    }
+  }
+}
