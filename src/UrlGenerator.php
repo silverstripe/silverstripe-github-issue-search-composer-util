@@ -11,7 +11,7 @@ class UrlGenerator
     /**
      * @var string
      */
-    protected $urlTemplate = 'https://silverstripe-issue-tracker.silverstripe.org?customRepos=%s';
+    protected $urlTemplate = 'https://silverstripe-github-issues.now.sh?customRepos=%s';
 
     /**
      * @param string $lockfileStr
