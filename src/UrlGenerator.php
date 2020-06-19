@@ -21,6 +21,10 @@ class UrlGenerator
     {
         $data = json_decode($lockfileStr, true);
 
+        if (!isset($data['packages'])) {
+            return null;
+        }
+
         $urls = array_filter(array_map(function ($package) {
             if (!$this->isSilverstripeRepo($package) || !$this->isGithubRepo($package)) {
                 return null;
