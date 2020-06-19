@@ -10,13 +10,13 @@ It shows only issues related to those Silverstripe modules.
 Install within a project (auto-discovers lock file)
 
 ```
-composer require silverstripe/github-issue-search-composer-util
+composer require silverstripe/github-issue-search-composer-util:^0.1
 ``` 
 
 Install globally (and pass through a lock file)
 
 ```
-composer global require silverstripe/github-issue-search-composer-util
+composer global require silverstripe/github-issue-search-composer-util:^0.1
 ``` 
 
 ## Usage
@@ -39,5 +39,5 @@ On MacOSX, you can do this automatically with the `open` command,
 on Windows with the `start` command.
 
 ```
-vendor/bin/github-issue-search | open
+vendor/bin/github-issue-search | xargs open
 ``` 
