@@ -1,8 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-
+foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php'] as $file) {
+    if (file_exists($file)) {
+        require $file;
+        break;
+    }
+}
 
 use Silverstripe\GithubIssueSearch\Util\UrlGenerator;
 
@@ -12,10 +16,13 @@ $lockfileStr = stream_get_contents(STDIN);
 
 // Fall back to lockfile autodiscovery
 if (!$lockfileStr) {
-    // Relative to vendor/bin/ or bin/
     $lockfilePaths = [
+        // bin/<script>
         __DIR__ . '/../composer.lock',
+        // vendor/bin/<script>
         __DIR__ . '/../../composer.lock',
+        // vendor/my/vendor/bin/<script>
+        __DIR__ . '/../../../../composer.lock',
     ];
     foreach ($lockfilePaths as $lockfilePath) {
         if (file_exists($lockfilePath)) {
