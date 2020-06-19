@@ -39,5 +39,5 @@ On MacOSX, you can do this automatically with the `open` command,
 on Windows with the `start` command.
 
 ```
-vendor/bin/github-issue-search | xargs open
+cat /my/project/composer.lock | github-issue-search | xargs open
 ``` 
